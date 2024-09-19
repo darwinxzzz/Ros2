@@ -1,0 +1,18 @@
+version: '3'
+services:
+  ros2_humble:
+    image: my_ros2_humble_image:latest
+    platform: linux/arm64
+    network_mode: host
+    volumes:
+      - ~/Ros2_WS:/root/ros2_ws
+      - /dev/dri:/dev/dri
+      - /tmp/.X11-unix:/tmp/.X11-unix  # Add this line
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_XCB_FORCE_SOFTWARE_OPENGL=1  # Optional: Forces software rendering
+    devices:
+      - /dev/dri:/dev/dri
+      - /dev/ttyUSB0:/dev/ttyUSB0  # Ensure your Arduino is mapped
+    tty: true
+    stdin_open: true

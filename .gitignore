@@ -1,0 +1,30 @@
+# Build and install directories
+build/
+install/
+log/
+
+# Colcon build artifacts
+.colcon/
+
+# Backup files
+*~
+
+# ROS2-specific
+.ros/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# VCS directories
+.git/
+
+# VSCode settings
+.vscode/
+
+# Other IDEs
+.idea/
+
+# OS generated files
+Thumbs.db
+.DS_Store
